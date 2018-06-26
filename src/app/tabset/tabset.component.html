@@ -1,0 +1,12 @@
+<div class="customTabset">
+  <ul role="tablist" class="nav nav-tabs justify-content-start">
+      <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active" class="nav-item">
+          <a class="nav-link" role="tab">{{tab.title}}</a>
+      </li>
+  </ul>
+  <div class="tabset-content">
+      <ng-content></ng-content>    
+  </div>
+</div>
+
+

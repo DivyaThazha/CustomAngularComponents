@@ -10,6 +10,8 @@ import { ModalComponent } from './modal/modal.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { PopoverComponent } from './popover/popover.component';
+import { TabsetComponent } from './tabset/tabset.component';
+import { TabComponent } from './tab/tab.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PopoverComponent } from './popover/popover.component';
     ModalComponent,
     DropdownComponent,
     TooltipComponent,
-    PopoverComponent
+    PopoverComponent,
+    TabsetComponent,
+    TabComponent
   ],
   imports: [
     FormsModule,

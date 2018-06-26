@@ -1,0 +1,32 @@
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: aqua;
+}
+
+.nav-tabs .nav-item.active .nav-link{
+    color: aquamarine;
+    background-color: #1d1919;
+    border: 0.5px solid #dee2e6;
+    border-bottom: none;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: -2px;
+}
+
+.tabset-content {
+    border: 0.5px solid #dee2e6;
+    border-top: none;
+    padding: 1rem 1rem;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    font-size: 13px;
+}
