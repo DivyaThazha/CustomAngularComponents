@@ -1,0 +1,83 @@
+<div class="container color-dark">
+  <div class="col">
+    <p>Components</p>
+  </div>
+</div>
+<div class="custom-container color-light">
+
+  <!-- CUSTOM BUTTON -->
+  <div class="customComponent customButtonComponent">
+    <div class="customComponentTitle">Custom Buttons</div>
+    <app-button className="default" value="Default Button" type="submit" (click)="disabled($event)" (messageEvent)="receiveMessage($event)"></app-button>
+    <app-button className="primary" value="Primary Button" type="submit" (click)="disabled($event)" (messageEvent)="receiveMessage($event)"></app-button>
+    <app-button className="secondary" value="Secondary Button" type="submit" (click)="disabled($event)" (messageEvent)="receiveMessage($event)"></app-button>
+    <p>Value captured: {{TextReceived}}</p>
+    <div class="">
+      <!--input type="text" class="txt" name="customText" required placeholder="Enter text.." [(ngModel)]="customText" (change)="sendMessage()"-->
+    </div>
+  </div>
+
+  <!-- CUSTOM DROPDOWN -->
+  <div class="customComponent customDropdownComponent">
+    <div class="customComponentTitle">Custom Dropdown</div>
+    <button class="btn btn-primary" dropdown-open (click)="dropdown1.toggle()">Toggle Dropdown</button>
+    {{dropdownOption}}
+    <app-dropdown class="dropdown" #dropdown1 (onOptionSelected)="receiveOptionValue($event)">
+      <ng-template #dropdownMenu>
+        <button class="dropdown-item" value="Option - 1">Option - 1</button>
+        <button class="dropdown-item" value="Another Option">Another Option</button>
+        <div class="optionsDivider"></div>
+        <button class="dropdown-item" value="Something else is here">Something else is here</button>
+      </ng-template>
+    </app-dropdown>
+  </div>
+
+  <!-- CUSTOM MODAL -->
+  <div class="customComponent customModalComponent">
+    <div class="customComponentTitle">Custom Modal</div>
+    <button (click)="openModal(modal1)">Launch modal 1</button>
+    <app-modal #modal1>
+      <ng-template #modalHeader>
+        <h2>Hello</h2>
+      </ng-template>
+      <ng-template #modalBody>
+        <p>This is how the modal will look like.</p>
+      </ng-template>
+      <ng-template #modalFooter>
+        <button cus-button-primary type="button" class="btn btn-primary" (click)="getModalStatus(modal1)">Status</button>
+      </ng-template>
+    </app-modal>
+
+    <button (click)="openModal(modal2)">Launch modal 2</button>
+    <app-modal #modal2>
+      <ng-template #modalHeader>
+        <h2>Hi again!</h2>
+      </ng-template>
+      <ng-template #modalBody>
+        <p>Don't worry, launching different modals is also been take care of.</p>
+      </ng-template>
+      <ng-template #modalFooter>
+        <button cus-button-primary type="button" class="btn btn-primary" (click)="closeModal(modal2)">Save</button>
+      </ng-template>
+    </app-modal>
+  </div>
+
+  <!-- CUSTOM TOOLTIP -->
+  <div class="customComponent customTooltipComponent">
+      <div class="customComponentTitle">Custom Tooltip</div>
+      <app-tooltip tooltipvalue="Tooltip on right" buttonvalue="Hover on me (right)" onside="right" className="lightblue"></app-tooltip><br/><br/>
+      <app-tooltip tooltipvalue="Tooltip on left" buttonvalue="Hover on me (left)" onside="left" className="lightblue"></app-tooltip><br/><br/>
+      <app-tooltip tooltipvalue="Tooltip on top" buttonvalue="Hover on me (top)" onside="top" className="lightblue"></app-tooltip><br/><br/>
+      <app-tooltip tooltipvalue="Tooltip on bottom" buttonvalue="Hover on me (bottom)" onside="bottom" className="lightblue"></app-tooltip><br/><br/>
+  </div>
+
+  <!-- CUSTOM POPOVER -->
+  <div class="customComponent customTooltipComponent">
+      <div class="customComponentTitle">Custom Popover</div>
+      <app-popover popoverheading="Title" popovervalue="Popover on right" buttonvalue="Click me (right)" onside="right" className="lightred"></app-popover><br/><br/>
+      <app-popover popoverheading="Title" popovervalue="Popover on left" buttonvalue="Click me (left)" onside="left" className="lightred"></app-popover><br/><br/>
+      <app-popover popoverheading="Title" popovervalue="Popover on top" buttonvalue="Click me (top)" onside="top" className="lightred"></app-popover><br/><br/>
+      <app-popover popoverheading="Title" popovervalue="Popover on bottom" buttonvalue="Click (bottom)" onside="bottom" className="lightred"></app-popover><br/><br/>
+  </div>
+
+</div>

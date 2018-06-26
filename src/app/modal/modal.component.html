@@ -1,0 +1,24 @@
+
+<div 
+class="modal fade"
+role="dialog"
+tabindex="-1"
+*ngIf="visible">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <ng-container *ngTemplateOutlet="header"></ng-container>
+      <span class="close" (click)="close()"> 
+        <img src="../../assets/Images/Close.png"/>
+      </span>
+    </div>
+    <div class="modal-body">
+      <ng-container *ngTemplateOutlet="body"></ng-container>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" (click)="close()">Close</button>
+      <ng-container *ngTemplateOutlet="footer"></ng-container>
+    </div>
+  </div>
+</div>
+</div>

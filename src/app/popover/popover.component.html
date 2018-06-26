@@ -1,0 +1,12 @@
+<span class="{{onside}}">
+    <button
+      class="btn {{className}}" (click)="onClick()" >{{buttonvalue}}
+    </button>
+      <span class="arrow"></span>
+      <span class="tooltip">
+        <div class="popoverTitle" >{{popoverheading}}
+          <span class="popoverClose" (click)="close()">X</span>
+        </div>
+        {{popovervalue}}
+      </span>
+</span>

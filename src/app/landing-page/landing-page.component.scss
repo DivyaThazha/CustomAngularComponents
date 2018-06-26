@@ -1,0 +1,62 @@
+.container {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+.col {
+    padding: .4em 1.3em; 
+}
+.color-dark {
+    background: rebeccapurple;
+    color: white;
+    font-size: 30px;
+}
+.color-light {
+    background: #252424;
+    color: white;
+}
+
+.custom-container {
+    width: 79%;
+    margin: auto;
+}
+
+input.txt {
+    border: 0;
+    padding: 0px 20px ;
+   // width: 80%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.life-container {
+    background:whitesmoke;
+    padding:.5em;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+}
+
+.customComponent {
+    padding: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.customButtonComponent app-button, .customModalComponent button {
+    margin-right: 25px;
+}
+
+.customComponentTitle {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.optionsDivider {
+    border-bottom: 1px solid;
+}

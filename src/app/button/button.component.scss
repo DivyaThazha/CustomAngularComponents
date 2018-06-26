@@ -1,0 +1,24 @@
+.default{
+    background: white;
+}
+.primary{
+    background: lightcoral;
+}
+
+.secondary{
+    background: lightcyan;
+}
+
+.btn[disabled$="true"]{
+    background-color: lightgrey;
+    color: rebeccapurple;
+}
+
+.disabled{
+    background-color: lightgrey;
+    color: rebeccapurple;
+}
+
+.btn{
+    border-radius: 0;
+}
