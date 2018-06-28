@@ -10,15 +10,15 @@ import { ModalComponent } from '../modal/modal.component';
 export class LandingPageComponent implements OnInit, AfterViewInit {
 
   @ViewChild(ModalComponent) modal; //this makes sure to observe the value of modal
-  modalStatus : boolean;
-  TextReceived :string;
-  customText :string;
-  dropdownOption : string;
-  constructor(private modalService : ModalService) { }
+  modalStatus: boolean;
+  TextReceived: string;
+  customText: string;
+  dropdownOption: string;
+  constructor(private modalService: ModalService) { }
 
   ngOnInit() {
   }
-  
+
 
   ngAfterViewInit() {
     this.modalStatus = this.modal.visible;
@@ -30,13 +30,13 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
    * @param  event
    * Method invoked on every click of the custom button to enable or disable it
    */
-  disabled($event){
+  disabled($event) {
     let classList = $event.target.classList;
-    if(!classList.contains("disabled")){
-     alert("Im not disabled.");
+    if (!classList.contains("disabled")) {
+      alert("Im not disabled.");
     }
-    
-    if(classList.contains("disabled")){
+
+    if (classList.contains("disabled")) {
       classList.remove("disabled");
     }
     else
@@ -48,17 +48,17 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
    * @param modal : Pass the modal Id to this function to open/close a modal
    * This function call a modal service to open/close a modal
    */
-  openModal(modal){
+  openModal(modal) {
     this.modalService.open(modal);
   }
 
-  closeModal(modal){
+  closeModal(modal) {
     this.modalService.close(modal);
   }
 
-  getModalStatus(){
+  getModalStatus() {
     this.modalStatus = this.modal.visible;
-    alert("State of modal: "+ this.modalStatus);
+    alert("State of modal: " + this.modalStatus);
   }
 
   receiveMessage($event) {
@@ -66,10 +66,10 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
     this.TextReceived = this.customText;
   }
 
-  receiveOptionValue($event){
+  receiveOptionValue($event) {
     console.log($event);
     this.dropdownOption = $event.value;
   }
-  
+
 
 }

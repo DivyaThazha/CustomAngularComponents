@@ -12,6 +12,8 @@ import { TooltipComponent } from './tooltip/tooltip.component';
 import { PopoverComponent } from './popover/popover.component';
 import { TabsetComponent } from './tabset/tabset.component';
 import { TabComponent } from './tab/tab.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import { AccordionPanelComponent } from './accordion-panel/accordion-panel.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { TabComponent } from './tab/tab.component';
     TooltipComponent,
     PopoverComponent,
     TabsetComponent,
-    TabComponent
+    TabComponent,
+    AccordionComponent,
+    AccordionPanelComponent
   ],
   imports: [
     FormsModule,

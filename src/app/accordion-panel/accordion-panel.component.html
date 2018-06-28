@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-body-custom">
+        <div class="card-custom">
+            <div role="tab" class="card-header card-header-custom" (click)="toggle.emit()">
+                <a >{{title}}
+                </a>
+                <span class="top-arrow"></span>
+            </div>
+            <div role="tabpanel" class="card-body collapse show" *ngIf="active">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

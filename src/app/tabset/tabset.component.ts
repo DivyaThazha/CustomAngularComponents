@@ -12,7 +12,9 @@ export class TabsetComponent implements AfterContentInit {
   
  
   ngAfterContentInit() {
-    console.log(this.tabs);
+
+    
+    //console.log(this.tabs);
     // get all active tabs
     let activeTabs = this.tabs.filter((tab)=>tab.active);
     
